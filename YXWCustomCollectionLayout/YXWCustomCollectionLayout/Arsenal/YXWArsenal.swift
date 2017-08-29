@@ -113,9 +113,9 @@ protocol shareProtocol {
 struct shareManager:shareProtocol {
 
     
-    fileprivate var title = "我的家里真有草原！快来看我在囧囧兔美食地图种的草吧!"
+    fileprivate var title = "我的家里真有草原!"
     
-    fileprivate var content = "#囧囧兔#"
+    fileprivate var content = "#Redlotus#"
     
     fileprivate var weiboContent = ""
     
@@ -123,7 +123,7 @@ struct shareManager:shareProtocol {
     
     var alias: String = ""
 
-    var baseUrl: String = "https://www.jojotoo.com"
+    var baseUrl: String = "https://www.redlotus.com"
     
     var type: shareType = .userMap
     
