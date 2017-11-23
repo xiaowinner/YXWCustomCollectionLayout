@@ -6,8 +6,8 @@
 _1.把项目中的 YXWCustomCollectionLayout.swift 文件拖入项目即可。_
 _2.添加的自己的collectionview.collectionViewLayout:_
 
-	        let customLayout = YXWCustomCollectionLayout()
-	        collectionView.collectionViewLayout = customLayout 
+	   let customLayout = YXWCustomCollectionLayout()
+	   collectionView.collectionViewLayout = customLayout 
 	
 _3.实现4个delegate:_
 
@@ -25,9 +25,9 @@ _3.实现4个delegate:_
 
 
 **截图**
-[1511424211305.jpg][1]
-[1511424228708.jpg][2]
-[1511424246479.jpg][3]
+[单列.jpg][1]
+[双列.jpg][2]
+[混合.jpg][3]
 
 [1]:	https://github.com/xiaowinner/YXWCustomCollectionLayout/blob/master/YXWCustomCollectionLayout/YXWCustomCollectionLayout/screenShot/1511424211305.jpg?raw=true "1511424211305.jpg"
 [2]:	https://github.com/xiaowinner/YXWCustomCollectionLayout/blob/master/YXWCustomCollectionLayout/YXWCustomCollectionLayout/screenShot/1511424228708.jpg?raw=true "1511424228708.jpg"
