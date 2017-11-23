@@ -29,6 +29,6 @@ _3.实现4个delegate:_
 [双列.jpg][2]
 [混合.jpg][3]
 
-[1]:	https://github.com/xiaowinner/YXWCustomCollectionLayout/blob/master/YXWCustomCollectionLayout/YXWCustomCollectionLayout/screenShot/1511424211305.jpg?raw=true "1511424211305.jpg"
-[2]:	https://github.com/xiaowinner/YXWCustomCollectionLayout/blob/master/YXWCustomCollectionLayout/YXWCustomCollectionLayout/screenShot/1511424228708.jpg?raw=true "1511424228708.jpg"
-[3]:	https://github.com/xiaowinner/YXWCustomCollectionLayout/blob/master/YXWCustomCollectionLayout/YXWCustomCollectionLayout/screenShot/1511424246479.jpg?raw=true "1511424246479.jpg"
+[1]:	https://github.com/xiaowinner/YXWCustomCollectionLayout/blob/master/YXWCustomCollectionLayout/YXWCustomCollectionLayout/screenShot/1511424211305.jpg
+[2]:	https://github.com/xiaowinner/YXWCustomCollectionLayout/blob/master/YXWCustomCollectionLayout/YXWCustomCollectionLayout/screenShot/1511424228708.jpg
+[3]:	https://github.com/xiaowinner/YXWCustomCollectionLayout/blob/master/YXWCustomCollectionLayout/YXWCustomCollectionLayout/screenShot/1511424246479.jpg
