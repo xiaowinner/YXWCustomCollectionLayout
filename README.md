@@ -5,17 +5,30 @@
 **用法**
 _1.把项目中的 YXWCustomCollectionLayout.swift 文件拖入项目即可。_
 _2.添加的自己的collectionview.collectionViewLayout:_
-			let customLayout = YXWCustomCollectionLayout()
+
+	        let customLayout = YXWCustomCollectionLayout()
 	        collectionView.collectionViewLayout = customLayout 
+	
 _3.实现4个delegate:_
-		// 决定sectionHeader的 高度
+
+	    // 决定sectionHeader的 高度
 	    func yxwLayout(waterFlowLayout: YXWCustomCollectionLayout,headerHeight indexPath: IndexPath ) -> CGFloat
-	    
+	
 	    // 决定item的 高度
 	    func yxwLayout(waterFlowLayout: YXWCustomCollectionLayout,heightForItemAtIndex indexPath: IndexPath , itemWidth: CGFloat) -> CGFloat;
-	    
+	
 	    // 决定cell的 列数
 	    func yxwLayout(waterFlowLayout: YXWCustomCollectionLayout,columnNumberOfSection indexPath:IndexPath) -> Int
-	    
+	
 	    // 决定cell的 边缘间距
 	    func yxwLayout(waterFlowLayout: YXWCustomCollectionLayout,edgeMarginOfCell indexPath:IndexPath) -> UIEdgeInsets
+
+
+**截图**
+[1511424211305.jpg][1]
+[1511424228708.jpg][2]
+[1511424246479.jpg][3]
+
+[1]:	https://github.com/xiaowinner/YXWCustomCollectionLayout/blob/master/YXWCustomCollectionLayout/YXWCustomCollectionLayout/screenShot/1511424211305.jpg?raw=true "1511424211305.jpg"
+[2]:	https://github.com/xiaowinner/YXWCustomCollectionLayout/blob/master/YXWCustomCollectionLayout/YXWCustomCollectionLayout/screenShot/1511424228708.jpg?raw=true "1511424228708.jpg"
+[3]:	https://github.com/xiaowinner/YXWCustomCollectionLayout/blob/master/YXWCustomCollectionLayout/YXWCustomCollectionLayout/screenShot/1511424246479.jpg?raw=true "1511424246479.jpg"
