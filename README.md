@@ -5,6 +5,7 @@
 **用法**
 
 _1.把项目中的 YXWCustomCollectionLayout.swift 文件拖入项目即可。_
+
 _2.添加的自己的collectionview.collectionViewLayout:_
 
 	   let customLayout = YXWCustomCollectionLayout()
