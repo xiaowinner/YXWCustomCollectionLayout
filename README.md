@@ -8,7 +8,7 @@ _2.添加的自己的collectionview.collectionViewLayout:_
 
 	   let customLayout = YXWCustomCollectionLayout()
 	   collectionView.collectionViewLayout = customLayout 
-	
+ 
 _3.实现4个delegate:_
 
 	    // 决定sectionHeader的 高度
