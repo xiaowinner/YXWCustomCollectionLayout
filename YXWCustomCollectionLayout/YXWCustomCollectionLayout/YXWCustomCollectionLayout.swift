@@ -4,10 +4,10 @@ protocol YXWCustomCollectionLayoutProtocol:class {
     
     
     // 决定sectionHeader的 高度
-    func yxwLayout(waterFlowLayout: YXWCustomCollectionLayout,headerHeight indexPath: IndexPath ) -> CGFloat;
+    func yxwLayout(waterFlowLayout: YXWCustomCollectionLayout,headerHeight indexPath: IndexPath ) -> CGFloat
     
     // 决定item的 高度
-    func yxwLayout(waterFlowLayout: YXWCustomCollectionLayout,heightForRowAtIndex indexPath: IndexPath , itemWidth: CGFloat) -> CGFloat;
+    func yxwLayout(waterFlowLayout: YXWCustomCollectionLayout,heightForItemAtIndex indexPath: IndexPath , itemWidth: CGFloat) -> CGFloat;
     
     // 决定cell的 列数
     func yxwLayout(waterFlowLayout: YXWCustomCollectionLayout,columnNumberOfSection indexPath:IndexPath) -> Int
@@ -23,14 +23,14 @@ protocol YXWCustomCollectionLayoutProtocol:class {
 class YXWCustomCollectionLayout: UICollectionViewFlowLayout {
     
     
-    // MARK: - 定义属性
+    // 定义属性
     weak var delegate: YXWCustomCollectionLayoutProtocol?
     
-    // 总列数
-    fileprivate var colCount : Int = 2
+    // 吸附功能不完善，暂时关闭
+    var headerAdsorb = false
     
     // 设置停留位置，默认为64(没有导航栏同样设置有效)
-    var naviHeight: CGFloat = 0
+    var headerStopY: CGFloat = 0
     
     // 第一个Item 确认 Y 值
     fileprivate var subjectOneY:CGFloat = 0
@@ -44,14 +44,12 @@ class YXWCustomCollectionLayout: UICollectionViewFlowLayout {
     // 存放所有行的高度
     fileprivate lazy var rowHeights = [CGFloat]()
     
-    // Header吸附开关
-    var headerAdsorb = false
+    // 总列数
+    fileprivate var colCount : Int = 2
 
     fileprivate var defaultHeaderY: CGFloat = 0
 
-    fileprivate var sectionMargin: CGFloat = 0
-
-    
+    fileprivate var currentScreenWidth = UIScreen.main.bounds.width
     
     override func invalidateLayout() {
         
@@ -85,15 +83,7 @@ class YXWCustomCollectionLayout: UICollectionViewFlowLayout {
                 
                 let count = collectionView?.numberOfItems(inSection: j)
                 
-                let headerHeight = delegate?.yxwLayout(waterFlowLayout: self, headerHeight: IndexPath(item: 0, section: j))
-                
-                if headerHeight == 0 {
-                    
-                } else{
-                    
-                    attrsArray.append(calculateHeaderAttributes(j))
-                    
-                }
+                attrsArray.append(calculateHeaderAttributes(j))
                 
                 for i in 0..<count! {
                     
@@ -136,7 +126,7 @@ class YXWCustomCollectionLayout: UICollectionViewFlowLayout {
                     
                     if collectionViewTopY > defaultHeaderY {
                         
-                        let offset = (collectionView?.contentOffset.y)! + naviHeight
+                        let offset = (collectionView?.contentOffset.y)! + headerStopY
                         
                         layoutAttributes.frame.origin.y = offset
                         
@@ -186,10 +176,9 @@ class YXWCustomCollectionLayout: UICollectionViewFlowLayout {
     
     
     //Item 计算方法
-    func calculateItemAttributes(_ indexPath:IndexPath) -> UICollectionViewLayoutAttributes {
+    fileprivate func calculateItemAttributes(_ indexPath:IndexPath) -> UICollectionViewLayoutAttributes {
         
         let itemAttribute = UICollectionViewLayoutAttributes(forCellWith: indexPath)
-        
         
         // 最短列
         var destCol = 0
@@ -198,7 +187,6 @@ class YXWCustomCollectionLayout: UICollectionViewFlowLayout {
         
         // 当前内边距
         let edgeInset = delegate?.yxwLayout(waterFlowLayout: self, edgeMarginOfCell: indexPath)
-        
         
         // 列间距
         let listDistance = edgeInset?.right
@@ -216,7 +204,7 @@ class YXWCustomCollectionLayout: UICollectionViewFlowLayout {
         for i in 0..<currentColcount! {
             
             let colHeight = colHeights[i]
-            
+
             if minColHeight > colHeight {
                 
                 minColHeight = colHeight
@@ -228,12 +216,6 @@ class YXWCustomCollectionLayout: UICollectionViewFlowLayout {
         }
         
         
-        if indexPath.item == 0 {
-            
-            destCol = 0
-            
-        }
-        
         // 计算每个item宽度
         // (collectionView宽度 - 左右间距 - 列间距) / 总列数
         let width = (collectionView?.frame.width)! - edgeInset!.left - edgeInset!.right
@@ -241,23 +223,38 @@ class YXWCustomCollectionLayout: UICollectionViewFlowLayout {
         let w = (width - CGFloat(currentColcount! - 1) * listDistance!) / CGFloat(currentColcount!)
         
         // 使用代理决定外部cell的高度
-        let h = delegate?.yxwLayout(waterFlowLayout: self, heightForRowAtIndex: indexPath, itemWidth: w)
+        let h = delegate?.yxwLayout(waterFlowLayout: self, heightForItemAtIndex: indexPath, itemWidth: w)
         
         let x = edgeInset!.left + CGFloat(destCol) * (w + listDistance!)
         
         var y = minColHeight + (edgeInset?.top)!
         
-        if  indexPath.item == 0 {
+        if indexPath.item == 0 {
             
-            var resultHeight:CGFloat = 0
+            var maxColHeight = colHeights.first!
             
-            for a in rowHeights {
+            // 找出当前最高的一列高度
+            for i in 0..<colHeights.count {
                 
-                resultHeight += a
+                let colHeight = colHeights[i]
+                
+                if maxColHeight < colHeight {
+                    
+                    maxColHeight = colHeight
+                    
+                }
                 
             }
             
-            y = resultHeight
+            if let headerHeight = delegate?.yxwLayout(waterFlowLayout: self, headerHeight: indexPath) {
+                
+                y = maxColHeight + (edgeInset?.top)! + headerHeight
+
+            }else {
+                
+                y = maxColHeight + (edgeInset?.top)!
+
+            }
             
         }
         
@@ -297,13 +294,12 @@ class YXWCustomCollectionLayout: UICollectionViewFlowLayout {
             
         }
         
-        
         if h! <= 0 {
             
             y = minColHeight
             
         }
-        
+
         itemAttribute.frame = CGRect(x: x, y: y, width: w, height: h!)
         
         colHeights[destCol] = y + h!
@@ -316,27 +312,46 @@ class YXWCustomCollectionLayout: UICollectionViewFlowLayout {
     
     
     //Header 计算方法
-    func calculateHeaderAttributes(_ section:Int) -> UICollectionViewLayoutAttributes {
+    fileprivate func calculateHeaderAttributes(_ section:Int) -> UICollectionViewLayoutAttributes {
         
-        let headerHeight = delegate?.yxwLayout(waterFlowLayout: self, headerHeight: IndexPath(item: 0, section: section))
+        let headerAttributes = UICollectionViewLayoutAttributes(forSupplementaryViewOfKind:UICollectionElementKindSectionHeader, with: IndexPath(item: 0, section: section))
+        headerAttributes.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
         
-        let headerAttributes = UICollectionViewLayoutAttributes(forSupplementaryViewOfKind:     UICollectionElementKindSectionHeader, with: IndexPath(item: 0, section: section))
-       
-        
-        var resultHeight:CGFloat = sectionMargin
-        
-        for a in rowHeights {
+        guard let headerHeight = delegate?.yxwLayout(waterFlowLayout: self, headerHeight: IndexPath(item: 0, section: section)) else {
             
-            resultHeight += a
+            return headerAttributes
+            
+        }
+    
+        
+        var maxColHeight = colHeights.first!
+        
+        // 找出当前最高的一列高度
+        for i in 0..<colHeights.count {
+            
+            let colHeight = colHeights[i]
+            
+            if maxColHeight < colHeight {
+                
+                maxColHeight = colHeight
+                
+            }
+            
+        }
+
+        
+        if let edgeInset = delegate?.yxwLayout(waterFlowLayout: self, edgeMarginOfCell: IndexPath(item: 0, section: section)) {
+            
+            maxColHeight = maxColHeight + edgeInset.bottom
             
         }
         
-        headerAttributes.frame = CGRect.init(x: 0, y: resultHeight, width: screenWidth, height: headerHeight!)
+        headerAttributes.frame = CGRect(x: 0, y: maxColHeight, width: currentScreenWidth, height: headerHeight)
         
-        defaultHeaderY = resultHeight
+        defaultHeaderY = maxColHeight
 
-        rowHeights.append(headerHeight!)
-        
+        rowHeights.append(headerHeight)
+                
         return headerAttributes
         
     }

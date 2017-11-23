@@ -12,24 +12,12 @@
 		AF6AB8441F55CAE300A7A3A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6AB8421F55CAE300A7A3A9 /* Main.storyboard */; };
 		AF6AB8461F55CAE300A7A3A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6AB8451F55CAE300A7A3A9 /* Assets.xcassets */; };
 		AF6AB8491F55CAE300A7A3A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6AB8471F55CAE300A7A3A9 /* LaunchScreen.storyboard */; };
-		AF6AB8941F55CCDE00A7A3A9 /* allBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AB8811F55CCDE00A7A3A9 /* allBaseNavigationController.swift */; };
-		AF6AB8951F55CCDE00A7A3A9 /* customLinearProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AB8821F55CCDE00A7A3A9 /* customLinearProgressView.swift */; };
-		AF6AB8961F55CCDE00A7A3A9 /* customPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AB8831F55CCDE00A7A3A9 /* customPopupViewController.swift */; };
-		AF6AB8971F55CCDE00A7A3A9 /* saveReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AB8841F55CCDE00A7A3A9 /* saveReport.swift */; };
-		AF6AB8981F55CCDE00A7A3A9 /* SwiftExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AB8851F55CCDE00A7A3A9 /* SwiftExtension.swift */; };
-		AF6AB8991F55CCDE00A7A3A9 /* uploadMonitorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AB8861F55CCDE00A7A3A9 /* uploadMonitorData.swift */; };
-		AF6AB89A1F55CCDE00A7A3A9 /* filtrateLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AB8881F55CCDE00A7A3A9 /* filtrateLabelView.swift */; };
-		AF6AB89B1F55CCDE00A7A3A9 /* filtrateLabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF6AB8891F55CCDE00A7A3A9 /* filtrateLabelView.xib */; };
-		AF6AB89C1F55CCDE00A7A3A9 /* popupFreeCouponTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AB88A1F55CCDE00A7A3A9 /* popupFreeCouponTableViewCell.swift */; };
-		AF6AB89D1F55CCDE00A7A3A9 /* popupFreeCouponTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF6AB88B1F55CCDE00A7A3A9 /* popupFreeCouponTableViewCell.xib */; };
-		AF6AB89E1F55CCDE00A7A3A9 /* shopFreeGroupPopupAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AB88C1F55CCDE00A7A3A9 /* shopFreeGroupPopupAlertView.swift */; };
-		AF6AB89F1F55CCDE00A7A3A9 /* shopFreeGroupPopupAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF6AB88D1F55CCDE00A7A3A9 /* shopFreeGroupPopupAlertView.xib */; };
-		AF6AB8A01F55CCDE00A7A3A9 /* shopFreeGroupPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AB88E1F55CCDE00A7A3A9 /* shopFreeGroupPopupView.swift */; };
-		AF6AB8A11F55CCDE00A7A3A9 /* shopFreeGroupPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF6AB88F1F55CCDE00A7A3A9 /* shopFreeGroupPopupView.xib */; };
-		AF6AB8A21F55CCDE00A7A3A9 /* YXWArsenal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AB8901F55CCDE00A7A3A9 /* YXWArsenal.swift */; };
-		AF6AB8A31F55CCDE00A7A3A9 /* YXWCustomCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AB8911F55CCDE00A7A3A9 /* YXWCustomCollectionLayout.swift */; };
-		AF6AB8A41F55CCDE00A7A3A9 /* YXWFiltrateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AB8921F55CCDE00A7A3A9 /* YXWFiltrateView.swift */; };
-		AF6AB8A51F55CCDE00A7A3A9 /* YXWKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AB8931F55CCDE00A7A3A9 /* YXWKit.swift */; };
+		AFAF35611FC5799900118832 /* YXWCustomCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAF35601FC5799900118832 /* YXWCustomCollectionLayout.swift */; };
+		AFAF35641FC5898500118832 /* testCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAF35621FC5898500118832 /* testCollectionViewCell.swift */; };
+		AFAF35651FC5898500118832 /* testCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFAF35631FC5898500118832 /* testCollectionViewCell.xib */; };
+		AFAF35671FC58A0600118832 /* YXWArsenal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAF35661FC58A0600118832 /* YXWArsenal.swift */; };
+		AFAF356A1FC5914500118832 /* testCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAF35681FC5914500118832 /* testCollectionReusableView.swift */; };
+		AFAF356B1FC5914500118832 /* testCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFAF35691FC5914500118832 /* testCollectionReusableView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,24 +28,12 @@
 		AF6AB8451F55CAE300A7A3A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF6AB8481F55CAE300A7A3A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF6AB84A1F55CAE300A7A3A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AF6AB8811F55CCDE00A7A3A9 /* allBaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = allBaseNavigationController.swift; sourceTree = "<group>"; };
-		AF6AB8821F55CCDE00A7A3A9 /* customLinearProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customLinearProgressView.swift; sourceTree = "<group>"; };
-		AF6AB8831F55CCDE00A7A3A9 /* customPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customPopupViewController.swift; sourceTree = "<group>"; };
-		AF6AB8841F55CCDE00A7A3A9 /* saveReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = saveReport.swift; sourceTree = "<group>"; };
-		AF6AB8851F55CCDE00A7A3A9 /* SwiftExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftExtension.swift; sourceTree = "<group>"; };
-		AF6AB8861F55CCDE00A7A3A9 /* uploadMonitorData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = uploadMonitorData.swift; sourceTree = "<group>"; };
-		AF6AB8881F55CCDE00A7A3A9 /* filtrateLabelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = filtrateLabelView.swift; sourceTree = "<group>"; };
-		AF6AB8891F55CCDE00A7A3A9 /* filtrateLabelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = filtrateLabelView.xib; sourceTree = "<group>"; };
-		AF6AB88A1F55CCDE00A7A3A9 /* popupFreeCouponTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = popupFreeCouponTableViewCell.swift; sourceTree = "<group>"; };
-		AF6AB88B1F55CCDE00A7A3A9 /* popupFreeCouponTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = popupFreeCouponTableViewCell.xib; sourceTree = "<group>"; };
-		AF6AB88C1F55CCDE00A7A3A9 /* shopFreeGroupPopupAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shopFreeGroupPopupAlertView.swift; sourceTree = "<group>"; };
-		AF6AB88D1F55CCDE00A7A3A9 /* shopFreeGroupPopupAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = shopFreeGroupPopupAlertView.xib; sourceTree = "<group>"; };
-		AF6AB88E1F55CCDE00A7A3A9 /* shopFreeGroupPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shopFreeGroupPopupView.swift; sourceTree = "<group>"; };
-		AF6AB88F1F55CCDE00A7A3A9 /* shopFreeGroupPopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = shopFreeGroupPopupView.xib; sourceTree = "<group>"; };
-		AF6AB8901F55CCDE00A7A3A9 /* YXWArsenal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXWArsenal.swift; sourceTree = "<group>"; };
-		AF6AB8911F55CCDE00A7A3A9 /* YXWCustomCollectionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXWCustomCollectionLayout.swift; sourceTree = "<group>"; };
-		AF6AB8921F55CCDE00A7A3A9 /* YXWFiltrateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXWFiltrateView.swift; sourceTree = "<group>"; };
-		AF6AB8931F55CCDE00A7A3A9 /* YXWKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXWKit.swift; sourceTree = "<group>"; };
+		AFAF35601FC5799900118832 /* YXWCustomCollectionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXWCustomCollectionLayout.swift; sourceTree = "<group>"; };
+		AFAF35621FC5898500118832 /* testCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testCollectionViewCell.swift; sourceTree = "<group>"; };
+		AFAF35631FC5898500118832 /* testCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = testCollectionViewCell.xib; sourceTree = "<group>"; };
+		AFAF35661FC58A0600118832 /* YXWArsenal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXWArsenal.swift; sourceTree = "<group>"; };
+		AFAF35681FC5914500118832 /* testCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testCollectionReusableView.swift; sourceTree = "<group>"; };
+		AFAF35691FC5914500118832 /* testCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = testCollectionReusableView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,48 +66,20 @@
 		AF6AB83D1F55CAE300A7A3A9 /* YXWCustomCollectionLayout */ = {
 			isa = PBXGroup;
 			children = (
-				AF6AB8801F55CCDE00A7A3A9 /* Arsenal */,
 				AF6AB83E1F55CAE300A7A3A9 /* AppDelegate.swift */,
+				AFAF35661FC58A0600118832 /* YXWArsenal.swift */,
 				AF6AB8401F55CAE300A7A3A9 /* ViewController.swift */,
+				AFAF35601FC5799900118832 /* YXWCustomCollectionLayout.swift */,
+				AFAF35621FC5898500118832 /* testCollectionViewCell.swift */,
+				AFAF35631FC5898500118832 /* testCollectionViewCell.xib */,
+				AFAF35681FC5914500118832 /* testCollectionReusableView.swift */,
+				AFAF35691FC5914500118832 /* testCollectionReusableView.xib */,
 				AF6AB8421F55CAE300A7A3A9 /* Main.storyboard */,
 				AF6AB8451F55CAE300A7A3A9 /* Assets.xcassets */,
 				AF6AB8471F55CAE300A7A3A9 /* LaunchScreen.storyboard */,
 				AF6AB84A1F55CAE300A7A3A9 /* Info.plist */,
 			);
 			path = YXWCustomCollectionLayout;
-			sourceTree = "<group>";
-		};
-		AF6AB8801F55CCDE00A7A3A9 /* Arsenal */ = {
-			isa = PBXGroup;
-			children = (
-				AF6AB8871F55CCDE00A7A3A9 /* Xib */,
-				AF6AB8811F55CCDE00A7A3A9 /* allBaseNavigationController.swift */,
-				AF6AB8821F55CCDE00A7A3A9 /* customLinearProgressView.swift */,
-				AF6AB8831F55CCDE00A7A3A9 /* customPopupViewController.swift */,
-				AF6AB8841F55CCDE00A7A3A9 /* saveReport.swift */,
-				AF6AB8851F55CCDE00A7A3A9 /* SwiftExtension.swift */,
-				AF6AB8861F55CCDE00A7A3A9 /* uploadMonitorData.swift */,
-				AF6AB8901F55CCDE00A7A3A9 /* YXWArsenal.swift */,
-				AF6AB8911F55CCDE00A7A3A9 /* YXWCustomCollectionLayout.swift */,
-				AF6AB8921F55CCDE00A7A3A9 /* YXWFiltrateView.swift */,
-				AF6AB8931F55CCDE00A7A3A9 /* YXWKit.swift */,
-			);
-			path = Arsenal;
-			sourceTree = "<group>";
-		};
-		AF6AB8871F55CCDE00A7A3A9 /* Xib */ = {
-			isa = PBXGroup;
-			children = (
-				AF6AB8881F55CCDE00A7A3A9 /* filtrateLabelView.swift */,
-				AF6AB8891F55CCDE00A7A3A9 /* filtrateLabelView.xib */,
-				AF6AB88A1F55CCDE00A7A3A9 /* popupFreeCouponTableViewCell.swift */,
-				AF6AB88B1F55CCDE00A7A3A9 /* popupFreeCouponTableViewCell.xib */,
-				AF6AB88C1F55CCDE00A7A3A9 /* shopFreeGroupPopupAlertView.swift */,
-				AF6AB88D1F55CCDE00A7A3A9 /* shopFreeGroupPopupAlertView.xib */,
-				AF6AB88E1F55CCDE00A7A3A9 /* shopFreeGroupPopupView.swift */,
-				AF6AB88F1F55CCDE00A7A3A9 /* shopFreeGroupPopupView.xib */,
-			);
-			path = Xib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,12 +142,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF6AB89B1F55CCDE00A7A3A9 /* filtrateLabelView.xib in Resources */,
 				AF6AB8491F55CAE300A7A3A9 /* LaunchScreen.storyboard in Resources */,
+				AFAF356B1FC5914500118832 /* testCollectionReusableView.xib in Resources */,
 				AF6AB8461F55CAE300A7A3A9 /* Assets.xcassets in Resources */,
-				AF6AB89D1F55CCDE00A7A3A9 /* popupFreeCouponTableViewCell.xib in Resources */,
-				AF6AB8A11F55CCDE00A7A3A9 /* shopFreeGroupPopupView.xib in Resources */,
-				AF6AB89F1F55CCDE00A7A3A9 /* shopFreeGroupPopupAlertView.xib in Resources */,
+				AFAF35651FC5898500118832 /* testCollectionViewCell.xib in Resources */,
 				AF6AB8441F55CAE300A7A3A9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,22 +157,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF6AB8981F55CCDE00A7A3A9 /* SwiftExtension.swift in Sources */,
-				AF6AB8991F55CCDE00A7A3A9 /* uploadMonitorData.swift in Sources */,
-				AF6AB89C1F55CCDE00A7A3A9 /* popupFreeCouponTableViewCell.swift in Sources */,
-				AF6AB8A31F55CCDE00A7A3A9 /* YXWCustomCollectionLayout.swift in Sources */,
-				AF6AB8971F55CCDE00A7A3A9 /* saveReport.swift in Sources */,
-				AF6AB8A21F55CCDE00A7A3A9 /* YXWArsenal.swift in Sources */,
+				AFAF35671FC58A0600118832 /* YXWArsenal.swift in Sources */,
 				AF6AB8411F55CAE300A7A3A9 /* ViewController.swift in Sources */,
-				AF6AB8A51F55CCDE00A7A3A9 /* YXWKit.swift in Sources */,
+				AFAF356A1FC5914500118832 /* testCollectionReusableView.swift in Sources */,
 				AF6AB83F1F55CAE300A7A3A9 /* AppDelegate.swift in Sources */,
-				AF6AB89E1F55CCDE00A7A3A9 /* shopFreeGroupPopupAlertView.swift in Sources */,
-				AF6AB8A01F55CCDE00A7A3A9 /* shopFreeGroupPopupView.swift in Sources */,
-				AF6AB8961F55CCDE00A7A3A9 /* customPopupViewController.swift in Sources */,
-				AF6AB89A1F55CCDE00A7A3A9 /* filtrateLabelView.swift in Sources */,
-				AF6AB8941F55CCDE00A7A3A9 /* allBaseNavigationController.swift in Sources */,
-				AF6AB8951F55CCDE00A7A3A9 /* customLinearProgressView.swift in Sources */,
-				AF6AB8A41F55CCDE00A7A3A9 /* YXWFiltrateView.swift in Sources */,
+				AFAF35641FC5898500118832 /* testCollectionViewCell.swift in Sources */,
+				AFAF35611FC5799900118832 /* YXWCustomCollectionLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +326,7 @@
 				AF6AB84F1F55CAE300A7A3A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
