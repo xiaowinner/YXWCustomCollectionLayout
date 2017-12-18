@@ -27,10 +27,11 @@ _3.实现4个delegate:_
 
 
 **截图**
-[单列.jpg][1]
-[双列.jpg][2]
-[混合.jpg][3]
+<p align="center">
+<img src="https://raw.githubusercontent.com/xiaowinner/YXWCustomCollectionLayout/master/YXWCustomCollectionLayout/1511424211305.jpg" alt="Kingfisher" title="Kingfisher" width="260"/>
+<img src="https://raw.githubusercontent.com/xiaowinner/YXWCustomCollectionLayout/master/YXWCustomCollectionLayout/1511424228708.jpg" alt="Kingfisher" title="Kingfisher" width="260"/>
+<img src="https://raw.githubusercontent.com/xiaowinner/YXWCustomCollectionLayout/master/YXWCustomCollectionLayout/1511424246479.jpg" alt="Kingfisher" title="Kingfisher" width="260"/>
+</p>
 
-[1]:	https://github.com/xiaowinner/YXWCustomCollectionLayout/blob/master/YXWCustomCollectionLayout/YXWCustomCollectionLayout/1511424211305.jpg
-[2]:	https://raw.githubusercontent.com/xiaowinner/YXWCustomCollectionLayout/master/YXWCustomCollectionLayout/1511424228708.jpg "1511424228708.jpg"
-[3]:	https://raw.githubusercontent.com/xiaowinner/YXWCustomCollectionLayout/master/YXWCustomCollectionLayout/1511424246479.jpg "1511424246479.jpg"
+
+
