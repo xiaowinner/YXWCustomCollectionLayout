@@ -1,7 +1,6 @@
 import UIKit
 
-protocol YXWCustomCollectionLayoutProtocol:class {
-    
+@objc protocol YXWCustomCollectionLayoutProtocol:NSObjectProtocol {
     
     // 决定sectionHeader的 高度
     func yxwLayout(waterFlowLayout: YXWCustomCollectionLayout,headerHeight indexPath: IndexPath ) -> CGFloat
@@ -15,16 +14,14 @@ protocol YXWCustomCollectionLayoutProtocol:class {
     // 决定cell的 边缘间距
     func yxwLayout(waterFlowLayout: YXWCustomCollectionLayout,edgeMarginOfCell indexPath:IndexPath) -> UIEdgeInsets
     
-    
 }
 
 
 
 class YXWCustomCollectionLayout: UICollectionViewFlowLayout {
     
-    
     // 定义属性
-    weak var delegate: YXWCustomCollectionLayoutProtocol?
+    @objc weak var delegate: YXWCustomCollectionLayoutProtocol?
     
     // 吸附功能不完善，暂时关闭
     var headerAdsorb = false
@@ -46,9 +43,9 @@ class YXWCustomCollectionLayout: UICollectionViewFlowLayout {
     
     // 总列数
     fileprivate var colCount : Int = 2
-
+    
     fileprivate var defaultHeaderY: CGFloat = 0
-
+    
     fileprivate var currentScreenWidth = UIScreen.main.bounds.width
     
     override func invalidateLayout() {
@@ -101,7 +98,7 @@ class YXWCustomCollectionLayout: UICollectionViewFlowLayout {
             }
             
         }
-
+        
     }
     
     
@@ -149,7 +146,7 @@ class YXWCustomCollectionLayout: UICollectionViewFlowLayout {
         
     }
     
-
+    
     
     // 决定collectionView的可滚动范围
     override var collectionViewContentSize: CGSize {
@@ -204,7 +201,7 @@ class YXWCustomCollectionLayout: UICollectionViewFlowLayout {
         for i in 0..<currentColcount! {
             
             let colHeight = colHeights[i]
-
+            
             if minColHeight > colHeight {
                 
                 minColHeight = colHeight
@@ -249,11 +246,11 @@ class YXWCustomCollectionLayout: UICollectionViewFlowLayout {
             if let headerHeight = delegate?.yxwLayout(waterFlowLayout: self, headerHeight: indexPath) {
                 
                 y = maxColHeight + (edgeInset?.top)! + headerHeight
-
+                
             }else {
                 
                 y = maxColHeight + (edgeInset?.top)!
-
+                
             }
             
         }
@@ -299,16 +296,16 @@ class YXWCustomCollectionLayout: UICollectionViewFlowLayout {
             y = minColHeight
             
         }
-
+        
         itemAttribute.frame = CGRect(x: x, y: y, width: w, height: h!)
         
         colHeights[destCol] = y + h!
         
         return itemAttribute
-
+        
         
     }
-
+    
     
     
     //Header 计算方法
@@ -322,7 +319,7 @@ class YXWCustomCollectionLayout: UICollectionViewFlowLayout {
             return headerAttributes
             
         }
-    
+        
         
         var maxColHeight = colHeights.first!
         
@@ -338,7 +335,7 @@ class YXWCustomCollectionLayout: UICollectionViewFlowLayout {
             }
             
         }
-
+        
         
         if let edgeInset = delegate?.yxwLayout(waterFlowLayout: self, edgeMarginOfCell: IndexPath(item: 0, section: section)) {
             
@@ -349,9 +346,9 @@ class YXWCustomCollectionLayout: UICollectionViewFlowLayout {
         headerAttributes.frame = CGRect(x: 0, y: maxColHeight, width: currentScreenWidth, height: headerHeight)
         
         defaultHeaderY = maxColHeight
-
+        
         rowHeights.append(headerHeight)
-                
+        
         return headerAttributes
         
     }
